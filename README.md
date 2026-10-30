@@ -1,41 +1,54 @@
-Imersão Engenharia de Software: Dev na Era da IA
+# Imersão Engenharia de Software: Dev na Era da IA 🚀
+### Desafio: Criando uma Calculadora com Google AI Studio
 
-1. Eu identifico
-Variáveis funcionam como "etiquetas" que guardam informações na memória do computador. Neste código, utilizamos 4 variáveis:
-Variável	Tipo de dados	O que ela armazena?
-operacao	Texto (corda/str)	O caractere correspondente à opção escolhida pelo usuário ('1','2','3' ou '4').
-num1	Número decimal (flutuador)	O primeiro número inserido para o cálculo (convertido para ponto flutuante).
-num2	Númeroflutuador)	O
-resultado	Número decimal (flutuador)	O resultado da operação matemática entre num1enum2.
-Dica: Note que a variável operacao armazena texto ('1'), e não número puro (1). É por isso que ela é comparada com aspas simples no código.
-2. Como a Aplicação Decide Qual Operação Executar?
-A decisão é feita por meio de estruturas de controle de fluxocondicse,Elif,outro):
-Primeiro filtro (Validação de entrada):
-code
-Python
-if operacao in ['1', '2', '3', '4']:
-Antes de pedir os números, o programa checa: "O que foi digitado está dentro dessa lista de opções válidas?"
-Comnão estiver(ex: o nós'9'ou'olá'), ou Python diriaoutrono final e avisa que a opção é invál
-Comestiver,
-A cascata de decisão:
-O Python lê as condições de cima para baixo:
-if operacao == '1':Procurar'1', faz uma soma e ignora o restante.
-elif operacao == '2': Se não foi a 1ª, mas for '2', faz a subtração e ignora o resto.
-elif operacao == '3':S'3', faz a multiplicação.
-elif operacao == '4':Procure por "4".'4', vai para o bloco da divisão.
-Assim que o Python encontra uma condição verdadeira, ele executa o bloco correspondente e pula todas as outras verificações seguintes.
-3. Explicando uma Parte Específica: O Bloco da Divisão
-Repare neste trecho dentro da operação 4:
-code
-Py
-elif operacao == '4':
-    if num2 != 0:
-        resultado = num1 / num2
-        print(f"\nResultado: {num1} / {num2} = {resultado}")
-    else:
-        print("\nErro: Não é possível dividir por zero!")
-Por que isso é necessário? Na matemática e na computação, não existe divisão por zero. Se tentássemos fazer num1 / 0, o Python travaria a execução do programa e exibiria um erro clássico chamado Erro de divisão zero.
-Como resolvemos?Nós usamosse dentro de outro se(chamada *condição)condicional aninhada).
-O operador !=significa **"diferente"diferente de".
-O código"O segundo número é diferente de zero?"
-Se for diferente de zero, calcula com segurança. Se for exatamente zero, exibe uma mensagem amigável sem derrubar o programa.
+Repositório criado para registrar os testes e aprendizados desenvolvidos durante a **Imersão Engenharia de Software da Alura**, utilizando inteligência artificial para auxiliar no desenvolvimento e entendimento de software.
+
+---
+
+## 📝 O Desafio
+
+O objetivo principal deste desafio foi vivenciar o papel do desenvolvedor trabalhando em conjunto com ferramentas de IA generativa (Google AI Studio / Gemini), cobrindo as seguintes etapas:
+
+1. **Geração inicial:** Solicitar à IA a criação de uma calculadora simples em Python com as quatro operações básicas (`+`, `-`, `*`, `/`).
+2. **Aprofundamento e interação contínua:** Conversar ativamente com a IA para entender as decisões técnicas, como:
+   - Identificar e classificar as variáveis utilizadas.
+   - Compreender o fluxo de tomada de decisão (`if/elif/else`).
+   - Analisar o tratamento defensivo de erros (como a divisão por zero).
+
+---
+
+## 💬 Prompts Utilizados na Interação
+
+### 1️⃣ Prompt Inicial (Geração da Solução)
+> *"Quero criar uma calculadora simples em Python que realize as quatro operações matemáticas básicas. Estou começando a aprender programação, então gere um código simples e organizado, com explicações sobre seus principais componentes."*
+
+### 2️⃣ Prompt de Aprofundamento (Análise Técnica)
+> *"Identifique as variáveis usadas no código e explique como a aplicação decide qual operação executar e como evita o erro de divisão por zero."*
+
+---
+
+## 🛠️ Tecnologias e Ferramentas
+
+- **Python 3** (Linguagem de programação)
+- **Google AI Studio / Gemini** (IA Generativa para assistência no código)
+- **Git & GitHub** (Versionamento e documentação)
+
+---
+
+## 🧠 Principais Conceitos Aprendidos
+
+Durante a interação com a IA, foram explorados os seguintes fundamentos de programação:
+
+- **Entrada e Saída de Dados:** Uso de `input()` para capturar dados do usuário e `print()` com *f-strings* para formatação legível.
+- **Conversão de Tipos (*Type Casting*):** Conversão do texto digitado (`str`) para ponto flutuante (`float`) antes de realizar os cálculos matemáticos.
+- **Controle de Fluxo (`if`, `elif`, `else`):** Validação de opções numéricas e escolha do caminho de execução correto para cada operação.
+- **Programação Defensiva:** Checagem preventiva contra `ZeroDivisionError` através de validação condicional (`num2 != 0`).
+
+---
+
+## 💻 Como Executar o Projeto Localmente
+
+1. Tenha o **Python 3** instalado em sua máquina.
+2. Clone este repositório:
+   ```bash
+   git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
